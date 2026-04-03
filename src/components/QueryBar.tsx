@@ -20,13 +20,13 @@ const DIVISION_OPTIONS: Array<RecordDivision | "ANY"> = [
   "ANY",
   "APPLIED",
   "EXPLORATION",
-  "ENUMERATION",
+  "INFRASTRUCTURE",
 ];
 const TYPE_OPTIONS: Array<RecordType | "ALL"> = [
   "ALL",
   "PROTOCOL",
-  "SYSTEM",
   "INTERFACE",
+  "COLLECTIVE",
 ];
 
 export default function QueryBar() {
@@ -43,17 +43,14 @@ export default function QueryBar() {
   const set = useCallback(
     (key: keyof Filters, value: string) => {
       const next = new URLSearchParams(params.toString());
-      if (
-        value === "ALL" ||
-        value === "ANY"
-      ) {
+      if (value === "ALL" || value === "ANY") {
         next.delete(key);
       } else {
         next.set(key, value);
       }
       router.replace(`${pathname}?${next.toString()}`, { scroll: false });
     },
-    [params, pathname, router]
+    [params, pathname, router],
   );
 
   return (
@@ -124,7 +121,10 @@ function FilterRow({
               padding: 0,
               color: "var(--fg)",
               opacity: active === opt ? 1 : 0.45,
-              borderBottom: active === opt ? "1px solid var(--fg)" : "1px solid transparent",
+              borderBottom:
+                active === opt
+                  ? "1px solid var(--fg)"
+                  : "1px solid transparent",
               paddingBottom: "1px",
             }}
           >

@@ -15,7 +15,8 @@ export function getAllRecords(): RecordMeta[] {
     return { ...data, slug } as RecordMeta;
   });
 
-  return records.sort((a, b) => (a.id > b.id ? 1 : -1));
+  // return records.sort((a, b) => (a.id > b.id ? -1 : 1));
+  return records;
 }
 
 export function getRecord(slug: string): {

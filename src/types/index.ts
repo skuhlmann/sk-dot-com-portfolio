@@ -1,12 +1,12 @@
 export type RecordStatus = "ACTIVE" | "ARCHIVED" | "REDACTED";
-export type RecordDivision = "APPLIED" | "EXPLORATION" | "ENUMERATION";
-export type RecordType = "PROTOCOL" | "SYSTEM" | "INTERFACE";
+export type RecordDivision = "APPLIED" | "EXPLORATION" | "INFRASTRUCTURE";
+export type RecordType = "PROTOCOL" | "INTERFACE" | "COLLECTIVE";
 
 export interface RecordMeta {
-  id: string;           // SBI-FA-001
-  slug: string;         // sbi-fa-001
-  date: string;         // 04 02 2026
-  subject: string;      // DAOhaus
+  id: string; // SBI-FA-001
+  slug: string; // sbi-fa-001
+  date: string; // 04 02 2026
+  subject: string; // DAOhaus
   classification: string;
   type: RecordType;
   division: RecordDivision;
@@ -16,6 +16,6 @@ export interface RecordMeta {
   deploymentType: string;
   summary: string;
   primaryFunction: string;
-  url?: string;
+  links?: { label: string; url: string }[];
   systemStatus: { label: string; value: string }[];
 }

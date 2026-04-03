@@ -33,9 +33,7 @@ export default function SiteFooter() {
           <div className="font-bold tracking-widest mb-1">
             SBI FIELD ARCHIVE NODE
           </div>
-          <div className="font-bold tracking-widest mb-1">
-            PUBLISHED BY SAM KUHLMANN
-          </div>
+
           <div className="opacity-50 tracking-wider mb-1">
             DIVISION: APPLIED SYSTEMS OBSERVATION UNIT
           </div>
@@ -72,6 +70,10 @@ export default function SiteFooter() {
       <div className="px-4 md:px-8 mt-5">
         {/* Contact */}
         <div className="text-xs mb-5">
+          <div className="font-bold tracking-widest mb-1">
+            <span className="tracking-wider mb-2 opacity-50">PUBLISHER: </span>{" "}
+            SAM KUHLMANN
+          </div>
           <div className="tracking-wider mb-2 opacity-50">
             EXTERNAL INQUIRY CHANNEL AVAILABLE
           </div>

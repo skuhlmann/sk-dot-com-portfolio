@@ -1,5 +1,3 @@
-"use client";
-
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 const components = {
@@ -27,11 +25,7 @@ const components = {
       {children}
     </strong>
   ),
-  hr: () => (
-    <hr
-      className="divider my-6"
-    />
-  ),
+  hr: () => <hr className="divider my-6 -mx-4 md:-mx-8" />,
 };
 
 export default function RecordContent({ content }: { content: string }) {
