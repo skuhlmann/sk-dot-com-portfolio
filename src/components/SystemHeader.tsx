@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const CONTACT_EMAIL = "samkuhlmann@odyssy.io";
+
 export default function SystemHeader() {
   const [time, setTime] = useState("");
 
@@ -33,16 +35,26 @@ export default function SystemHeader() {
           <span className="text-lg font-bold tracking-widest uppercase">
             FIELD ARCHIVE&nbsp;&nbsp;(SBI-FA-SAM-KUHLMANN-001)
           </span>
-          <span className="flex gap-4 md:gap-8 text-xs opacity-70 flex-wrap">
-            <span>
+          <span className="flex gap-4 md:gap-8 text-xs flex-wrap items-baseline">
+            <span className="opacity-70">
               SEC.CLR:&nbsp;<span className="opacity-100">LEVEL_4</span>
             </span>
-            <span>
+            <span className="opacity-70">
               SYS_TIME:&nbsp;
               <span className="opacity-100 tabular-nums">
                 {time || "──:──:──"}
               </span>
             </span>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="tracking-widest hover:underline opacity-95 hover:opacity-100 transition-opacity text-sm"
+              style={{
+                color: "var(--accent)",
+                fontWeight: "900",
+              }}
+            >
+              INITIATE CONTACT
+            </a>
           </span>
         </div>
       </div>

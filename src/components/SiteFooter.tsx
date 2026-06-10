@@ -79,8 +79,8 @@ export default function SiteFooter() {
           </div>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="tracking-widest hover:underline opacity-80 hover:opacity-100 transition-opacity"
-            style={{ color: "var(--fg)" }}
+            className="tracking-widest hover:underline opacity-95 hover:opacity-100 transition-opacity text-xl font-bold"
+            style={{ color: "var(--accent)" }}
           >
             INITIATE CONTACT
           </a>
