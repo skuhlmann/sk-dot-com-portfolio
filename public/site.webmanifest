@@ -1,19 +1,50 @@
 {
-  "name": "Sam Kuhlmann",
-  "short_name": "SK",
+  "name": "Sam Kuhlmann Field Archive",
+  "short_name": "SBI-FA",
+  "description": "Structured Record Access Layer — SBI-FA",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#7FA98A",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon-120x120.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/mstile-144x144.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#7FA98A",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }

@@ -33,7 +33,7 @@ export default function SystemHeader() {
       <div className="px-4 md:px-8 py-2">
         <div className="flex items-baseline justify-between gap-4 flex-wrap">
           <span className="text-lg font-bold tracking-widest uppercase">
-            FIELD ARCHIVE&nbsp;&nbsp;(SBI-FA-SAM-KUHLMANN-001)
+            SAM KUHLMANN - ARCHIVE&nbsp;&nbsp;(SBI-FA-001)
           </span>
           <span className="flex gap-4 md:gap-8 text-xs flex-wrap items-baseline">
             <span className="opacity-70">

@@ -10,28 +10,49 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
+const metadataBase = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+);
+
+const previewImage = {
+  url: "/apple-touch-icon-152x152.png",
+  width: 152,
+  height: 152,
+  alt: "Sam Kuhlmann",
+};
+
 export const metadata: Metadata = {
+  metadataBase,
   title: "Sam Kuhlmann",
   description: "Structured Record Access Layer — SBI-FA",
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon-57x57.png", sizes: "57x57", type: "image/png" },
+      { url: "/apple-touch-icon-72x72.png", sizes: "72x72", type: "image/png" },
+      { url: "/apple-touch-icon-114x114.png", sizes: "114x114", type: "image/png" },
+      { url: "/apple-touch-icon-120x120.png", sizes: "120x120", type: "image/png" },
+      { url: "/apple-touch-icon-144x144.png", sizes: "144x144", type: "image/png" },
+      { url: "/apple-touch-icon-152x152.png", sizes: "152x152", type: "image/png" },
+    ],
   },
   manifest: "/site.webmanifest",
   openGraph: {
     title: "Sam Kuhlmann",
     description: "Structured Record Access Layer — SBI-FA",
     type: "website",
-    images: [{ url: "/android-chrome-512x512.png", width: 512, height: 512 }],
+    images: [previewImage],
   },
   twitter: {
     card: "summary",
     title: "Sam Kuhlmann",
     description: "Structured Record Access Layer — SBI-FA",
-    images: ["/android-chrome-512x512.png"],
+    images: [previewImage],
   },
 };
 

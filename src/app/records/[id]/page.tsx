@@ -4,6 +4,13 @@ import Link from "next/link";
 import { getAllRecords, getRecord } from "@/lib/records";
 import RecordContent from "./RecordContent";
 
+const previewImage = {
+  url: "/apple-touch-icon-152x152.png",
+  width: 152,
+  height: 152,
+  alt: "Sam Kuhlmann",
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -21,13 +28,13 @@ export async function generateMetadata({
       title,
       description: meta.summary,
       type: "article",
-      images: [{ url: "/android-chrome-512x512.png", width: 512, height: 512 }],
+      images: [previewImage],
     },
     twitter: {
       card: "summary",
       title,
       description: meta.summary,
-      images: ["/android-chrome-512x512.png"],
+      images: [previewImage],
     },
   };
 }
