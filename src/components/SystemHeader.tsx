@@ -1,11 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const CONTACT_EMAIL = "samkuhlmann@odyssy.io";
 
 export default function SystemHeader() {
   const [time, setTime] = useState("");
+  const pathname = usePathname();
+  const isResume = pathname.startsWith("/resume");
+  const bg = isResume ? "#ffffff" : "var(--bg)";
+  const fg = isResume ? "#17241c" : "var(--fg)";
+  const line = isResume ? "#cbd5cc" : "var(--line)";
 
   useEffect(() => {
     function tick() {
@@ -24,9 +30,9 @@ export default function SystemHeader() {
     <header
       style={{
         fontFamily: "var(--font-mono)",
-        borderBottom: "1px solid var(--line)",
-        color: "var(--fg)",
-        backgroundColor: "var(--bg)",
+        borderBottom: `1px solid ${line}`,
+        color: fg,
+        backgroundColor: bg,
       }}
       className="sticky top-0 z-50"
     >

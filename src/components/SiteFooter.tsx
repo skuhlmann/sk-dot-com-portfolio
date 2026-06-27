@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const CONTACT_EMAIL = "samkuhlmann@odyssy.io";
 
 export default function SiteFooter() {
   const [timestamp, setTimestamp] = useState("");
+  const pathname = usePathname();
+  const isResume = pathname.startsWith("/resume");
+  const fg = isResume ? "#17241c" : "var(--fg)";
 
   useEffect(() => {
     function fmt() {
@@ -23,7 +27,7 @@ export default function SiteFooter() {
 
   return (
     <footer
-      style={{ fontFamily: "var(--font-mono)", color: "var(--fg)" }}
+      style={{ fontFamily: "var(--font-mono)", color: fg }}
       className="mt-12"
     >
       <hr className="divider mb-6" />
